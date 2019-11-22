@@ -9,17 +9,17 @@
             android:icon="@drawable/ic_menu_camera"
             android:title="@string/menu_home" />
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/blue_phones"
             android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/menu_gallery" />
+            android:title="Blue Phones" />
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/bus_stops"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_slideshow" />
+            android:title="Bus Stops" />
         <item
-            android:id="@+id/nav_tools"
+            android:id="@+id/classrooms"
             android:icon="@drawable/ic_menu_manage"
-            android:title="@string/menu_tools" />
+            android:title="Class Rooms" />
     </group>
 
     <item android:title="Communicate">
