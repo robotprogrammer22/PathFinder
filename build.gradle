@@ -18,6 +18,12 @@ allprojects {
     repositories {
         google()
         jcenter()
+        mavenLocal()
+        mavenCentral()
+        maven {
+            url 'https://maven.google.com'
+            name 'google'
+        }
         
     }
 }
