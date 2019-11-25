@@ -1,21 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_home"
-            android:title="@string/menu_home" />
+            android:id="@+id/buildings"
+            android:checkable="true"
+            android:title="@string/building_show_select" />
         <item
             android:id="@+id/blue_phones"
-            android:title="Blue Phones" />
+            android:checkable="true"
+            android:checked="false"
+            android:title="@string/blue_phone_select" />
         <item
             android:id="@+id/bus_stops"
-            android:title="Bus Stops" />
-        <item
-            android:id="@+id/classrooms"
-            android:title="Room Finder" />
+            android:checkable="true"
+            android:checked="false"
+            android:title="@string/bus_stop_select" />
     </group>
 
     <!--

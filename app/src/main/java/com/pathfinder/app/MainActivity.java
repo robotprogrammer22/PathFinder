@@ -1,9 +1,6 @@
-package com.example.pathfinder;
+package com.pathfinder.app;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
 import android.support.v4.view.GravityCompat;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.view.MenuItem;
@@ -15,7 +12,6 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.MarkerOptions;
 
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -30,14 +26,6 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -54,8 +42,8 @@ public class MainActivity extends AppCompatActivity
     {
         LatLng campus = new LatLng(35.180436, -111.654084);
         googleMap.moveCamera(CameraUpdateFactory.newLatLng(campus));
-        googleMap.setMinZoomPreference(10);
-        googleMap.setMaxZoomPreference(15);
+        googleMap.setMinZoomPreference(15);
+        googleMap.setMaxZoomPreference(20);
     }
 
     @Override
@@ -96,13 +84,11 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_home) {
+        if (id == R.id.buildings) {
             // Handle the camera action
         } else if (id == R.id.blue_phones) {
 
         } else if (id == R.id.bus_stops) {
-
-        } else if (id == R.id.classrooms) {
 
         }
         /*

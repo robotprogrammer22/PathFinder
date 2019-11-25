@@ -1,4 +1,4 @@
-package com.example.pathfinder;
+package com.pathfinder.app;
 
 import org.junit.Test;
 
