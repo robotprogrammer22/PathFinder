@@ -9,6 +9,11 @@ class NavPoint extends MapEntity
     int buildingNum;
     ArrayList<NavPoint> visiblePoints;
 
+    public NavPoint(double xCoord, double yCoord, int thisId)
+    {
+        super(xCoord, yCoord, thisId);
+    }
+
     public NavPoint(double xCoord, double yCoord, int thisId, int thisType, int thisFloorNum, int thisBuildingNum, ArrayList<NavPoint> thisVisiblePoints)
     {
         super(xCoord, yCoord, thisId);

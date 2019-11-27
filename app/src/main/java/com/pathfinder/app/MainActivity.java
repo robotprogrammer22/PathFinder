@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
+        PathfinderDataHandler handler = new PathfinderDataHandler();
 
         SupportMapFragment mapFrag = (SupportMapFragment)getSupportFragmentManager().findFragmentById(R.id.map);
         mapFrag.getMapAsync(this);
