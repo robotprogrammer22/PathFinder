@@ -4,22 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
-    <group android:checkableBehavior="single">
-        <item
-            android:id="@+id/buildings"
-            android:checkable="true"
-            android:title="@string/building_show_select" />
-        <item
-            android:id="@+id/blue_phones"
-            android:checkable="true"
-            android:checked="false"
-            android:title="@string/blue_phone_select" />
-        <item
-            android:id="@+id/bus_stops"
-            android:checkable="true"
-            android:checked="false"
-            android:title="@string/bus_stop_select" />
-    </group>
+    <item
+        android:id="@+id/buildings"
+        android:title="@string/building_show_select"
+        app:actionLayout="@layout/switch_item"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/blue_phones"
+        android:title="@string/blue_phone_select"
+        app:actionLayout="@layout/switch_item"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/bus_stops"
+        android:title="@string/bus_stop_select"
+        app:actionLayout="@layout/switch_item"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/pedways"
+        app:actionLayout="@layout/switch_item"
+        app:showAsAction="always"
+        android:title="@string/pedway_select" />
 
     <!--
     <item android:title="Communicate">

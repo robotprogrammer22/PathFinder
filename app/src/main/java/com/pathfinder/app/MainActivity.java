@@ -3,6 +3,7 @@ package com.pathfinder.app;
 import android.os.Bundle;
 import android.support.v4.view.GravityCompat;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
@@ -16,9 +17,13 @@ import com.google.android.gms.maps.model.LatLng;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, OnMapReadyCallback {
+        implements NavigationView.OnNavigationItemSelectedListener, OnMapReadyCallback
+{
+
+    SupportMapFragment mapFrag;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +40,7 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
         PathfinderDataHandler handler = new PathfinderDataHandler();
 
-        SupportMapFragment mapFrag = (SupportMapFragment)getSupportFragmentManager().findFragmentById(R.id.map);
+        mapFrag = (SupportMapFragment)getSupportFragmentManager().findFragmentById(R.id.map);
         mapFrag.getMapAsync(this);
     }
 
@@ -84,14 +89,26 @@ public class MainActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
+        Log.d(null, "onNavigationItemSelected Called");
 
-        if (id == R.id.buildings) {
+        if (id == R.id.buildings)
+        {
             // Handle the camera action
-        } else if (id == R.id.blue_phones) {
-
-        } else if (id == R.id.bus_stops) {
-
+            Log.d(null, "Buildings selected");
         }
+        else if (id == R.id.blue_phones)
+        {
+            Log.d(null, "Blue Phones selected");
+        }
+        else if (id == R.id.bus_stops)
+        {
+            Log.d(null, "Bus Stops selected");
+        }
+        else if (id == R.id.pedways)
+        {
+            Log.d(null, "Pedways selected");
+        }
+
         /*
         else if (id == R.id.nav_share) {
 
