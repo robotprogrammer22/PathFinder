@@ -8,4 +8,5 @@
     <string name="building_show_select">Show Buildings</string>
     <string name="blue_phone_select">Show Blue Phones</string>
     <string name="bus_stop_select">Show Bus Stops</string>
+    <string name="pedway_select">Show Pedways</string>
 </resources>
