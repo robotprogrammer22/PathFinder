@@ -5,8 +5,13 @@
     <string name="nav_header_title">Display Options</string>
     <string name="action_settings">Settings</string>
 
-    <string name="building_show_select">Show Buildings</string>
+    <string name="building_select">Show Buildings</string>
     <string name="blue_phone_select">Show Blue Phones</string>
     <string name="bus_stop_select">Show Bus Stops</string>
     <string name="pedway_select">Show Pedways</string>
+
+    <string name="building_hide">Hide Buildings</string>
+    <string name="blue_phone_hide">Hide Blue Phones</string>
+    <string name="bus_stop_hide">Hide Bus Stops</string>
+    <string name="pedway_hide">Hide Pedways</string>
 </resources>

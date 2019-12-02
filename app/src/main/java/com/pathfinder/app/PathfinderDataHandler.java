@@ -76,18 +76,20 @@ class PathfinderDataHandler
 
         //next, run A* algorithm to find shortest path to the localGoal
         // while the openList is not empty
+
+        NavPoint visiblePoint;
+        NavPoint localPoint;
         while(openList.size() > 0)
         {
             // pop the first item out of the List
             // note: I didn't use a queue here because I wanted flexibility with finding
             // items without removing the entire queue. It's also just easier.
-            NavPoint localPoint = openList.get(0).localNav;
-            NavPoint visiblePoint; // MOVE THESE TO OUTSIDE THE SCOPE OF THIS LOOP
+            localPoint = openList.get(0).localNav;
             // for each point visible to that point
             for(int i = 0; i < localPoint.visiblePoints.size(); i++)
             {
                 visiblePoint = localPoint.visiblePoints.get(i);
-                if(visiblePoint.type == ROOM)
+                if(visiblePoint.type == localGoal.type)
                 {
                     // if the visible point is a room, check to see if it is the room we're looking for
                     if(visiblePoint == globalGoal)
@@ -101,7 +103,7 @@ class PathfinderDataHandler
                 }
                 else
                 {
-                    // else,
+                    // else, if it's an intersection, cal
                     // TODO: Implement the rest of this method.
                 }
             }

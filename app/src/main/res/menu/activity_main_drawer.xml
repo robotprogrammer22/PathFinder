@@ -4,43 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
-    <item
-        android:id="@+id/buildings"
-        android:title="@string/building_show_select"
-        app:actionLayout="@layout/switch_item"
-        app:showAsAction="always" />
-
-    <item
-        android:id="@+id/blue_phones"
-        android:title="@string/blue_phone_select"
-        app:actionLayout="@layout/switch_item"
-        app:showAsAction="always" />
-
-    <item
-        android:id="@+id/bus_stops"
-        android:title="@string/bus_stop_select"
-        app:actionLayout="@layout/switch_item"
-        app:showAsAction="always" />
-
-    <item
-        android:id="@+id/pedways"
-        app:actionLayout="@layout/switch_item"
-        app:showAsAction="always"
-        android:title="@string/pedway_select" />
-
-    <!--
-    <item android:title="Communicate">
-        <menu>
-            <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="@string/menu_share" />
-            <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="@string/menu_send" />
-        </menu>
-    </item>
-    -->
-
+    <group
+        android:checkableBehavior="all"
+        android:enabled="true">
+        <item
+            android:id="@+id/buildings"
+            android:checkable="true"
+            android:enabled="true"
+            android:title="@string/building_select" />
+        <item
+            android:id="@+id/blue_phones"
+            android:checkable="true"
+            android:enabled="true"
+            android:title="@string/blue_phone_select" />
+        <item
+            android:id="@+id/bus_stops"
+            android:checkable="true"
+            android:enabled="true"
+            android:title="@string/bus_stop_select" />
+        <item
+            android:id="@+id/pedways"
+            android:checkable="true"
+            android:enabled="true"
+            android:title="@string/pedway_select" />
+    </group>
 </menu>
